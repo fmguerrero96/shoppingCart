@@ -6,7 +6,7 @@ export default function NavBar() {
         </h1>
         <div className="pageLinks">
             <div>Home</div>
-            <div>Shoop</div>
+            <div>Shop</div>
         </div>
         <div>Cart</div>
     </>
