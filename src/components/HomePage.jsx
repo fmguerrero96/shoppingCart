@@ -1,9 +1,11 @@
+import NavBar from "./NavBar.jsx/"
+
 export default function HomePage() {
     return(
         <>
             <NavBar />
             <h1>
-                Welcome to FakeFashio
+                Welcome to FakeFashion
             </h1>
             <p>
             Discover the latest trends in mock fashion at FakeFashion! 
