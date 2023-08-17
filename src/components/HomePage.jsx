@@ -2,7 +2,7 @@ import NavBar from "./NavBar.jsx/"
 
 export default function HomePage() {
     return(
-        <>
+        <div className="homePage">
             <NavBar />
             <h1>
                 Welcome to FakeFashion
@@ -13,6 +13,6 @@ export default function HomePage() {
             Whether you're looking for the perfect imaginary outfit or simply browsing 
             for inspiration, you're in for a virtual shopping experience like no other.
             </p>
-        </>
+        </div>
     )
 }
