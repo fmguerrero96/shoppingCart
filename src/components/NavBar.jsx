@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 export default function NavBar() {
     return (
     <>
@@ -5,8 +7,8 @@ export default function NavBar() {
             FakeFashion
         </h1>
         <div className="pageLinks">
-            <div>Home</div>
-            <div>Shop</div>
+            <Link to='/'>Home</Link>
+            <Link to='/shop'>Shop</Link>
         </div>
         <div>Cart</div>
     </>
