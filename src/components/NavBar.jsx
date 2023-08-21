@@ -7,8 +7,8 @@ export default function NavBar() {
             FakeFashion
         </h1>
         <div className="pageLinks">
-            <Link className='homeLink' to='/'>Home</Link>
-            <Link className='shopLink' to='/shop'>Shop</Link>
+            <Link style={{ textDecoration: 'none', color: 'white' }} className='homeLink' to='/'>Home</Link>
+            <Link style={{ textDecoration: 'none', color: 'white' }} className='shopLink' to='/shop'>Shop</Link>
         </div>
         <div className='cartIcon'>Cart</div>
     </div>
