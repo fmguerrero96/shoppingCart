@@ -72,3 +72,8 @@ html {
     font-size: 1.5rem;
     text-align: center;
 }
+
+span {
+    color: rgb(13, 126, 113);
+    font-weight: 700;
+}

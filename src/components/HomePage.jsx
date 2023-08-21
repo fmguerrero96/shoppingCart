@@ -6,7 +6,7 @@ export default function HomePage() {
             <NavBar />
             <div className="homeContent">
                 <h1 className="welcome">
-                    Welcome to FakeFashion
+                    Welcome to <span>FakeFashion</span>
                 </h1>
                 <p className="description">
                 Discover the latest trends in mock fashion at FakeFashion! 
