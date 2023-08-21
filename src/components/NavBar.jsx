@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 export default function NavBar() {
     return (
-    <>
+    <div className='navBar'>
         <h1>
             FakeFashion
         </h1>
@@ -11,6 +11,6 @@ export default function NavBar() {
             <Link to='/shop'>Shop</Link>
         </div>
         <div>Cart</div>
-    </>
+    </div>
     )
 }
