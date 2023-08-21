@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
 html, body, div, span, h1, h2, h3, h4, h5, h6, p,
 a, em, strong, ol, ul, li, form, footer, header,
 menu, nav {
@@ -13,3 +15,32 @@ menu, nav {
     box-sizing: border-box;
 }
 
+html {
+    font-family: 'Roboto', sans-serif;
+}
+
+.navBar {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 2rem 1rem 2rem;
+    color: white;
+}
+
+.navTitle {
+    font-size: 2.5rem;
+    font-weight: 500;
+}
+
+.pageLinks {
+    display: flex;
+    justify-content: space-between;
+    width: 10%;
+    align-items: center;
+    font-size: 1.15rem;
+}
+
+.cartIcon {
+    align-self: center;
+    font-size: 1.15rem;
+}
