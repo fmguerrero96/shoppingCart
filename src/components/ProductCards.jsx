@@ -17,6 +17,7 @@ export default function ProductCards() {
                         <img src={product.image} alt={product.description}></img>
                         <p>{product.title}</p>
                         <p>${product.price}</p>
+                        <button>Add to cart</button>
                     </div>
                 ))
             ) : (
