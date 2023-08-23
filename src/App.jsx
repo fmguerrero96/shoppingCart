@@ -1,6 +1,4 @@
-import HomePage from "./components/HomePage"
-//import Cart from "./components/Cart"
-//import NavBar from "./components/navBar"
+import Router from "./components/Router";
 import { useState } from "react"
 
 function App() {
@@ -13,7 +11,7 @@ function App() {
 
   return (
     <>
-      <HomePage onCartToggle={handleCartToggle} isOpen={isCartOpen} onCartClose={handleCartToggle} />
+      <Router onCartToggle={handleCartToggle} isOpen={isCartOpen} onCartClose={handleCartToggle} />
     </>
   )
 }
