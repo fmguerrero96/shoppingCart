@@ -1,9 +1,9 @@
-import NavBar from "./NavBar.jsx/"
+//import NavBar from "./NavBar.jsx/"
 
-export default function HomePage() {
+export default function HomePage({navBar}) {
     return(
         <div className="homePage">
-            <NavBar />
+            {navBar}
             <div className="homeContent">
                 <h1 className="welcome">
                     Welcome to <span>FakeFashion</span>

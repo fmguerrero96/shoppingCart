@@ -1,11 +1,11 @@
 import NavBar from "./NavBar.jsx/"
 import ProductCards from "./ProductCards"
 
-export default function ShopPage() {
+export default function ShopPage({navBar}) {
     
     return(
         <div className="shopPage">
-            <NavBar />
+            {navBar}
             <h2>Shop</h2>
             <ProductCards/>
         </div>
