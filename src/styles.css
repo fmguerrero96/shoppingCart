@@ -77,3 +77,15 @@ span {
     color: rgb(13, 126, 113);
     font-weight: 700;
 }
+
+.productsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.cardImage {
+    width: 9rem;
+}
