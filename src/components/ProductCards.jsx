@@ -15,9 +15,11 @@ export default function ProductCards() {
                 products.map((product) =>(
                     <div className="productCard" key={product.id}>
                         <img className="cardImage" src={product.image} alt={product.description}></img>
-                        <p>{product.title}</p>
-                        <p>${product.price}</p>
-                        <button>Add to cart</button>
+                        <div className="productInfo">
+                            <p className="productTitle">{product.title}</p>
+                            <p className="price">${product.price}</p>
+                            <button className="addToCart">Add to cart</button>
+                        </div>
                     </div>
                 ))
             ) : (
