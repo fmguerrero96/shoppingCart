@@ -2,20 +2,17 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ShopPage from "./ShopPage.jsx";
 import ErrorPage from "./ErrorPage.jsx"
 import HomePage from "./HomePage.jsx";
-import NavBar from "./navBar.jsx";
 
-export default function Router() {
-  const navBar = <NavBar/>
-
+export default function Router({isOpen, onCartToggle}) {
     const router = createBrowserRouter ([
         {
           path: "/",
-          element: <HomePage navBar={navBar}/>,
+          element: <HomePage onCartToggle={onCartToggle} isOpen={isOpen} navBar={navBar}/>,
           errorElement: <ErrorPage />,
         },
         {
           path: '/shop',
-          element: <ShopPage navBar={navBar}/>
+          element: <ShopPage onCartToggle={onCartToggle} isOpen={isOpen} navBar={navBar}/>
         },
       ])
 
