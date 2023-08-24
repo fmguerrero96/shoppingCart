@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import Cart from './Cart'
 
-export default function NavBar() {
+export default function NavBar({isOpen, onCartToggle}) {
     return (
     <div className='navBar'>
         <h1 className='navTitle'>
@@ -11,7 +11,7 @@ export default function NavBar() {
             <Link style={{ textDecoration: 'none', color: 'white' }} className='homeLink' to='/'>Home</Link>
             <Link style={{ textDecoration: 'none', color: 'white' }} className='shopLink' to='/shop'>Shop</Link>
         </div>
-        <div className='cartIcon'>Cart</div>
+        <div className='cartIcon' onClick={onCartToggle}>Cart</div>
         <Cart/>
     </div>
     )

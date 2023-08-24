@@ -1,7 +1,9 @@
-export default function HomePage({navBar}) {
+import NavBar from "./navBar";
+
+export default function HomePage({isOpen, onCartToggle}) {
     return(
         <div className="homePage">
-            {navBar}
+            <NavBar isOpen={isOpen} onCartToggle={onCartToggle}/>
             <div className="homeContent">
                 <h1 className="welcome">
                     Welcome to <span>FakeFashion</span>
