@@ -1,5 +1,3 @@
-//import NavBar from "./NavBar.jsx/"
-
 export default function HomePage({navBar}) {
     return(
         <div className="homePage">

@@ -1,4 +1,3 @@
-import NavBar from "./NavBar.jsx/"
 import ProductCards from "./ProductCards"
 
 export default function ShopPage({navBar}) {
