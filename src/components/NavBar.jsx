@@ -12,7 +12,7 @@ export default function NavBar({isOpen, onCartToggle}) {
             <Link style={{ textDecoration: 'none', color: 'white' }} className='shopLink' to='/shop'>Shop</Link>
         </div>
         <div className='cartIcon' onClick={onCartToggle}>Cart</div>
-        <Cart/>
+        {isOpen && <Cart />} 
     </div>
     )
 }
