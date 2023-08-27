@@ -138,6 +138,8 @@ span {
     color: black;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .cartHeader {
@@ -149,6 +151,11 @@ span {
 .cartTitle {
     font-size: 1.3rem;
     font-weight: 500;
+    margin-right: 6rem;
+}
+
+.xButton {
+    margin-left: 5rem;
 }
 
 .cart.isOpen {
