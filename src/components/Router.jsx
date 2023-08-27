@@ -2,14 +2,22 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ShopPage from "./ShopPage.jsx";
 import ErrorPage from "./ErrorPage.jsx"
 import HomePage from "./HomePage.jsx";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Router() {
   const [isCartOpen, setIsCartOpen] = useState(false)
+  const [products, setProducts] = useState(null)
 
   function handleCartToggle() {
     setIsCartOpen(!isCartOpen)
   }
+
+  useEffect(() => {
+      fetch('https://fakestoreapi.com/products')
+          .then(res=>res.json())
+          .then(res=>setProducts(res))        
+  }, [])
+
     const router = createBrowserRouter ([
         {
           path: "/",
@@ -18,7 +26,7 @@ export default function Router() {
         },
         {
           path: '/shop',
-          element: <ShopPage isOpen={isCartOpen} onCartToggle={handleCartToggle}/>
+          element: <ShopPage products={products} isOpen={isCartOpen} onCartToggle={handleCartToggle}/>
         },
       ])
 
