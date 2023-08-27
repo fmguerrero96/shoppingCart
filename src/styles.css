@@ -51,10 +51,11 @@ html {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    position: absolute;
+    position: static;
     top: 79px;
     bottom: 0;
     width: 100%;
+    height: 91vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -126,3 +127,30 @@ span {
     margin-bottom: 1rem;
 }
 
+.cart{
+    position:fixed;
+    top: 0;
+    right: -20%;
+    width: 22%;
+    height: 100vh;
+    background-color: rgb(175, 175, 175);
+    transition: right 1s ease-in-out; 
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+.cartHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 1rem 1rem 1rem;
+}
+
+.cartTitle {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.cart.isOpen {
+    right: 0; 
+  }
