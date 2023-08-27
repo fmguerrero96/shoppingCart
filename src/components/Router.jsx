@@ -13,6 +13,11 @@ export default function Router() {
     setIsCartOpen(!isCartOpen)
   }
 
+  function handleAddToCart(product) {
+    setCart(prevCart => [...prevCart, product])
+    console.log(product)
+  }
+
   useEffect(() => {
       fetch('https://fakestoreapi.com/products')
           .then(res=>res.json())
