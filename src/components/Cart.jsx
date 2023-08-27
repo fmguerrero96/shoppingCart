@@ -1,6 +1,6 @@
-export default function Cart({onCartToggle}) {
+export default function Cart({onCartToggle, isOpen}) {
     return(
-        <div className="cart">
+        <div className={`cart ${isOpen ? 'isOpen' : ''}`}>
             <div className="cartHeader">
                 <h2>
                     Your Cart
