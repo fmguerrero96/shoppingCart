@@ -9,7 +9,6 @@ export default function Router() {
 
   function handleCartToggle() {
     setIsCartOpen(!isCartOpen)
-    console.log(isCartOpen)
   }
     const router = createBrowserRouter ([
         {
