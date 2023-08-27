@@ -161,3 +161,10 @@ span {
 .cart.isOpen {
     right: 0; 
   }
+
+  .checkout {
+    margin-bottom: 1rem;
+    width: 80%;
+    height: 2.25rem;
+    border-radius: 7px;
+}
