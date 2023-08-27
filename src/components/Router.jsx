@@ -27,12 +27,12 @@ export default function Router() {
     const router = createBrowserRouter ([
         {
           path: "/",
-          element: <HomePage isOpen={isCartOpen} onCartToggle={handleCartToggle}/>,
+          element: <HomePage cart={cart} isOpen={isCartOpen} onCartToggle={handleCartToggle}/>,
           errorElement: <ErrorPage />,
         },
         {
           path: '/shop',
-          element: <ShopPage onAddToCart={handleAddToCart} products={products} isOpen={isCartOpen} onCartToggle={handleCartToggle}/>
+          element: <ShopPage cart={cart} onAddToCart={handleAddToCart} products={products} isOpen={isCartOpen} onCartToggle={handleCartToggle}/>
         },
       ])
 
