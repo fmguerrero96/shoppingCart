@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 export default function Router() {
   const [isCartOpen, setIsCartOpen] = useState(false)
   const [products, setProducts] = useState(null)
+  const [cart, setCart] = useState([])
 
   function handleCartToggle() {
     setIsCartOpen(!isCartOpen)
