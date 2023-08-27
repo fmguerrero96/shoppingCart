@@ -6,7 +6,10 @@ export default function CartItem({cart}) {
                     cart.map((item) => (
                         <div className="cartProduct">
                             <img className="itemImage" src={item.image} alt={item.description}></img>
-                            <span>{item.price}</span>
+                            <span>${item.price} each</span>
+                            <button className="subtract">-</button>
+                            <div className="amount">0</div>
+                            <button className="add">+</button>
                         </div>
                     ))
                 ) : (
