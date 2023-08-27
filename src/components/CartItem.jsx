@@ -5,7 +5,7 @@ export default function CartItem({cart}) {
                 cart.length > 0  ? (
                     cart.map((item) => (
                         <div className="cartProduct">
-                            <img src={item.image} alt={item.description}></img>
+                            <img className="itemImage" src={item.image} alt={item.description}></img>
                             <span>{item.price}</span>
                         </div>
                     ))
