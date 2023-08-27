@@ -32,7 +32,7 @@ export default function Router() {
         },
         {
           path: '/shop',
-          element: <ShopPage products={products} isOpen={isCartOpen} onCartToggle={handleCartToggle}/>
+          element: <ShopPage onAddToCart={handleAddToCart} products={products} isOpen={isCartOpen} onCartToggle={handleCartToggle}/>
         },
       ])
 
