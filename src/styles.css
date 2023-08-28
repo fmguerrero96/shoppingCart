@@ -171,7 +171,7 @@ span {
 }
 
 .itemImage {
-    width: 7rem;
+    width: 5rem;
     margin-right: 1rem;
 }
 
@@ -189,13 +189,16 @@ span {
 }
 
 .cartProduct {
+    background-color: rgb(255, 255, 255);
+    padding: .5rem;
     border: 1px solid black;
+    margin-bottom: 1rem;
 }
 
 .amountControl {
     display: flex;
     justify-content: center;
-    margin: 1rem 0 1rem 0;
+    margin: 1rem 0 0 0;
 }
 
 .amount {
@@ -207,4 +210,13 @@ span {
     font-size: 20px;
     height: 1.5rem;
     font-weight: 500;
+}
+
+.each {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.total {
+    margin-bottom: 1rem;
 }
