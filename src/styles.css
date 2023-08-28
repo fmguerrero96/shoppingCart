@@ -180,6 +180,7 @@ span {
     margin: 1rem 0 3rem 2rem;
     width: 80%;
     height: 75%;
+    overflow-y: auto;
 }
 
 .imagePrice {
