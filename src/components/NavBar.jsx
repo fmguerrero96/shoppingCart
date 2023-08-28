@@ -11,7 +11,7 @@ export default function NavBar({isOpen, onCartToggle, cart, onQuantityChange}) {
             <Link style={{ textDecoration: 'none', color: 'white' }} className='homeLink' to='/'>Home</Link>
             <Link style={{ textDecoration: 'none', color: 'white' }} className='shopLink' to='/shop'>Shop</Link>
         </div>
-        <div className='cartIcon' onClick={onCartToggle}>Cart</div>
+        <div className='cartIcon' onClick={onCartToggle}>Cart({cart.length})</div>
         {isOpen && <Cart onQuantityChange={onQuantityChange} cart={cart} onCartToggle={onCartToggle} isOpen={isOpen}/>} 
     </div>
     )
