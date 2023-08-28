@@ -10,6 +10,7 @@ export default function Cart({onCartToggle, isOpen, cart}) {
                 <div onClick={onCartToggle} className="xButton">X</div>
             </div>
             <CartItem cart={cart}/>
+            <div className="total">Total: $666.00</div>
             <button className="checkout">Checkout</button>
         </div>
     )
