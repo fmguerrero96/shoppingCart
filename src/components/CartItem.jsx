@@ -1,4 +1,4 @@
-export default function CartItem({cart}) {
+export default function CartItem({cart, onQuantityChange}) {
     return (
         <div className="cartItems">
             {
@@ -11,9 +11,9 @@ export default function CartItem({cart}) {
                             </div>
                             
                             <div className="amountControl">
-                                <button className="subtract">-</button>
+                                <button onClick={() => onQuantityChange('subtract', item)} className="subtract">-</button>
                                 <div className="amount">{item.quantity}</div>
-                                <button className="add">+</button>
+                                <button onClick={() => onQuantityChange('add', item)} className="add">+</button>
                             </div>
                         </div>
                     ))

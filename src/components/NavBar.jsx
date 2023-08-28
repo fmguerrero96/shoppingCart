@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import Cart from './Cart'
 
-export default function NavBar({isOpen, onCartToggle, cart}) {
+export default function NavBar({isOpen, onCartToggle, cart, onQuantityChange}) {
     return (
     <div className='navBar'>
         <h1 className='navTitle'>
@@ -12,7 +12,7 @@ export default function NavBar({isOpen, onCartToggle, cart}) {
             <Link style={{ textDecoration: 'none', color: 'white' }} className='shopLink' to='/shop'>Shop</Link>
         </div>
         <div className='cartIcon' onClick={onCartToggle}>Cart</div>
-        {isOpen && <Cart cart={cart} onCartToggle={onCartToggle} isOpen={isOpen}/>} 
+        {isOpen && <Cart onQuantityChange={onQuantityChange} cart={cart} onCartToggle={onCartToggle} isOpen={isOpen}/>} 
     </div>
     )
 }

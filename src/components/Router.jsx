@@ -26,6 +26,20 @@ export default function Router() {
     }
   }
 
+  function handleQuantity(action, product) {
+    if(action === 'add'){
+      const updatedCart = cart.map((item) =>
+            item.id === product.id ? { ...item, quantity: item.quantity + 1 } : item
+        );
+        setCart(updatedCart);
+    } else {
+      const updatedCart = cart.map((item) =>
+            item.id === product.id ? { ...item, quantity: item.quantity - 1 } : item
+        );
+        setCart(updatedCart);
+    }
+  } 
+
   useEffect(() => {
       fetch('https://fakestoreapi.com/products')
           .then(res=>res.json())
@@ -35,12 +49,12 @@ export default function Router() {
     const router = createBrowserRouter ([
         {
           path: "/",
-          element: <HomePage cart={cart} isOpen={isCartOpen} onCartToggle={handleCartToggle}/>,
+          element: <HomePage onQuantityChange={handleQuantity} cart={cart} isOpen={isCartOpen} onCartToggle={handleCartToggle}/>,
           errorElement: <ErrorPage />,
         },
         {
           path: '/shop',
-          element: <ShopPage cart={cart} onAddToCart={handleAddToCart} products={products} isOpen={isCartOpen} onCartToggle={handleCartToggle}/>
+          element: <ShopPage onQuantityChange={handleQuantity} cart={cart} onAddToCart={handleAddToCart} products={products} isOpen={isCartOpen} onCartToggle={handleCartToggle}/>
         },
       ])
 
