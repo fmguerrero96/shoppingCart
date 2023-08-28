@@ -12,7 +12,7 @@ export default function CartItem({cart}) {
                             
                             <div className="amountControl">
                                 <button className="subtract">-</button>
-                                <div className="amount">0</div>
+                                <div className="amount">{item.quantity}</div>
                                 <button className="add">+</button>
                             </div>
                         </div>
