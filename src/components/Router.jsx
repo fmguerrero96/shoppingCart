@@ -54,6 +54,7 @@ export default function Router() {
       let subTotal = cart[i].quantity * cart[i].price
       newTotal += subTotal
     }
+    newTotal = parseFloat(newTotal.toFixed(2))
     setTotal(newTotal)
   })
 
