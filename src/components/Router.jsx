@@ -8,6 +8,7 @@ export default function Router() {
   const [isCartOpen, setIsCartOpen] = useState(false)
   const [products, setProducts] = useState(null)
   const [cart, setCart] = useState([])
+  const [total, setTotal] = useState(0)
 
   function handleCartToggle() {
     setIsCartOpen(!isCartOpen)
@@ -46,6 +47,16 @@ export default function Router() {
         setCart(updatedCart);
     }
   } 
+
+  useEffect(() => {
+    let final = 0 
+    for(let i = 0; i < cart.length; i++){
+      let subTotal = cart[i].quantity * cart[i].price
+      final += subTotal
+    }
+    setTotal(final)
+    console.log(total)
+  })
 
   useEffect(() => {
       fetch('https://fakestoreapi.com/products')
