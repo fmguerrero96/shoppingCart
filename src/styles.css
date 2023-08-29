@@ -88,6 +88,12 @@ span {
     max-width: 1200px;
 }
 
+.shopTitle{
+    font-size: 2.5rem;
+    font-weight: 500;
+    margin: 3rem 0 2rem 9rem;
+}
+
 .cardImage {
     width: 9rem;
     margin-top: 4rem;
