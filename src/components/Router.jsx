@@ -13,6 +13,13 @@ export default function Router() {
     setIsCartOpen(!isCartOpen)
   }
 
+  function handleRemoveItem(item) {
+    if(item.quantity === 1) {
+      const newCart = cart.filter((product) => product.id != item.id)
+      setCart(newCart)
+    }
+  }
+
   function handleAddToCart(product) {
     const existingItem = cart.find((item) => item.id === product.id);
 
@@ -49,12 +56,12 @@ export default function Router() {
     const router = createBrowserRouter ([
         {
           path: "/",
-          element: <HomePage onQuantityChange={handleQuantity} cart={cart} isOpen={isCartOpen} onCartToggle={handleCartToggle}/>,
+          element: <HomePage onDeleteItem={handleRemoveItem} onQuantityChange={handleQuantity} cart={cart} isOpen={isCartOpen} onCartToggle={handleCartToggle}/>,
           errorElement: <ErrorPage />,
         },
         {
           path: '/shop',
-          element: <ShopPage onQuantityChange={handleQuantity} cart={cart} onAddToCart={handleAddToCart} products={products} isOpen={isCartOpen} onCartToggle={handleCartToggle}/>
+          element: <ShopPage onDeleteItem={handleRemoveItem} onQuantityChange={handleQuantity} cart={cart} onAddToCart={handleAddToCart} products={products} isOpen={isCartOpen} onCartToggle={handleCartToggle}/>
         },
       ])
 
