@@ -49,13 +49,12 @@ export default function Router() {
   } 
 
   useEffect(() => {
-    let final = 0 
+    let newTotal = 0 
     for(let i = 0; i < cart.length; i++){
       let subTotal = cart[i].quantity * cart[i].price
-      final += subTotal
+      newTotal += subTotal
     }
-    setTotal(final)
-    console.log(total)
+    setTotal(newTotal)
   })
 
   useEffect(() => {
