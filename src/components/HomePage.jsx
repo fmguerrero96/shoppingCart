@@ -1,9 +1,9 @@
 import NavBar from "./navBar";
 
-export default function HomePage({isOpen, onCartToggle, cart, onQuantityChange, onDeleteItem}) {
+export default function HomePage({isOpen, onCartToggle, cart, onQuantityChange, onDeleteItem, total}) {
     return(
         <div className="homePage">
-            <NavBar onDeleteItem={onDeleteItem} onQuantityChange={onQuantityChange} cart={cart} isOpen={isOpen} onCartToggle={onCartToggle}/>
+            <NavBar total={total} onDeleteItem={onDeleteItem} onQuantityChange={onQuantityChange} cart={cart} isOpen={isOpen} onCartToggle={onCartToggle}/>
             <div className="homeContent">
                 <h1 className="welcome">
                     Welcome to <span>FakeFashion</span>

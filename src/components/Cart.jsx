@@ -1,6 +1,6 @@
 import CartItem from "./CartItem";
 
-export default function Cart({onCartToggle, isOpen, cart, onQuantityChange, onDeleteItem}) {
+export default function Cart({onCartToggle, isOpen, cart, onQuantityChange, onDeleteItem, total}) {
     return(
         <div className={`cart ${isOpen ? 'isOpen' : ''}`}>
             <div className="cartHeader">
@@ -10,7 +10,7 @@ export default function Cart({onCartToggle, isOpen, cart, onQuantityChange, onDe
                 <div onClick={onCartToggle} className="xButton">X</div>
             </div>
             <CartItem onDeleteItem={onDeleteItem} onQuantityChange={onQuantityChange} cart={cart}/>
-            <div className="total">Total: $666.00</div>
+            <div className="total">Total: {total}</div>
             <button className="checkout">Checkout</button>
         </div>
     )

@@ -66,12 +66,12 @@ export default function Router() {
     const router = createBrowserRouter ([
         {
           path: "/",
-          element: <HomePage onDeleteItem={handleRemoveItem} onQuantityChange={handleQuantity} cart={cart} isOpen={isCartOpen} onCartToggle={handleCartToggle}/>,
+          element: <HomePage total={total} onDeleteItem={handleRemoveItem} onQuantityChange={handleQuantity} cart={cart} isOpen={isCartOpen} onCartToggle={handleCartToggle}/>,
           errorElement: <ErrorPage />,
         },
         {
           path: '/shop',
-          element: <ShopPage onDeleteItem={handleRemoveItem} onQuantityChange={handleQuantity} cart={cart} onAddToCart={handleAddToCart} products={products} isOpen={isCartOpen} onCartToggle={handleCartToggle}/>
+          element: <ShopPage total={total} onDeleteItem={handleRemoveItem} onQuantityChange={handleQuantity} cart={cart} onAddToCart={handleAddToCart} products={products} isOpen={isCartOpen} onCartToggle={handleCartToggle}/>
         },
       ])
 
