@@ -7,7 +7,7 @@ export default function Cart({onCartToggle, isOpen, cart, onQuantityChange, onDe
                 <h2 className="cartTitle">
                     Your Cart
                 </h2>
-                <div onClick={onCartToggle} className="xButton">X</div>
+                <div onClick={onCartToggle} className="xButton">x</div>
             </div>
             <CartItem onDeleteItem={onDeleteItem} onQuantityChange={onQuantityChange} cart={cart}/>
             <div className="total">Total: ${total}</div>
