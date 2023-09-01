@@ -3,7 +3,7 @@ import Cart from './Cart'
 
 export default function NavBar({isOpen, onCartToggle, cart, onQuantityChange, onDeleteItem, total}) {
     return (
-    <div className='navBar'>
+    <div data-testid="navBar" className='navBar'>
         <h1 className='navTitle'>
             FakeFashion
         </h1>
