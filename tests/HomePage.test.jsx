@@ -15,4 +15,15 @@ describe("HomePage component", () => {
         const homePageElement = screen.getByTestId("home-page"); 
         expect(homePageElement).toBeInTheDocument();
     });
+
+    it("Displays appropriate description message", () => {
+        const sampleCart = ['helo']
+        render(
+            <BrowserRouter>
+                <HomePage cart={sampleCart} />
+            </BrowserRouter>
+        );
+        const description = screen.getByText(/Discover the latest trends in mock fashion at FakeFashion! Explore our wide range of non-existent clothing, shoes, and accessories./i)
+        expect(description).toBeInTheDocument
+    });
 });
