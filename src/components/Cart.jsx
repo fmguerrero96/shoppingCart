@@ -2,7 +2,7 @@ import CartItem from "./CartItem";
 
 export default function Cart({onCartToggle, isOpen, cart, onQuantityChange, onDeleteItem, total}) {
     return(
-        <div className={`cart ${isOpen ? 'isOpen' : ''}`}>
+        <div data-testid="cart" className={`cart ${isOpen ? 'isOpen' : ''}`}>
             <div className="cartHeader">
                 <h2 className="cartTitle">
                     Your Cart
