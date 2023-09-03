@@ -4,7 +4,7 @@ import NavBar from "./navBar"
 export default function ShopPage({isOpen, onCartToggle, products, onAddToCart, cart, onQuantityChange, onDeleteItem, total}) {
     
     return(
-        <div className="shopPage">
+        <div data-testid="shopPage" className="shopPage">
             <NavBar total={total} onDeleteItem={onDeleteItem} onQuantityChange={onQuantityChange} cart={cart} isOpen={isOpen} onCartToggle={onCartToggle}/>
             <h2 className="shopTitle">Shop</h2>
             <ProductCards onAddToCart={onAddToCart} products={products}/>
