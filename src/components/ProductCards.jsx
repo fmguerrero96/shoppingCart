@@ -4,7 +4,7 @@ export default function ProductCards({products, onAddToCart}) {
         <div className="productsContainer">
             {products ? (
                 products.map((product) =>(
-                    <div className="productCard" key={product.id}>
+                    <div data-testid='productCard' className="productCard" key={product.id}>
                         <img className="cardImage" src={product.image} alt={product.description}></img>
                         <div className="productInfo">
                             <p className="productTitle">{product.title}</p>
