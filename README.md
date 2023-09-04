@@ -1,8 +1,3 @@
-# React + Vite
+This is my version of The Odin Project's "Shopping Cart" project. I completed this project using the FakeStore API, React, Vite, Vitest and React Testing Library. The objective of this project was to practice testing react components, practice using React Router and also to keep practicing the react skills taught by The Odin Project. A full list of instructions can be found on The Odin Project's website (https://www.theodinproject.com/lessons/node-path-react-new-shopping-cart).
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The background image used in the home screen is by Atikh Bana. Check out his work here -> https://unsplash.com/@tikh . 
