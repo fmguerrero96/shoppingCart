@@ -4,7 +4,7 @@ export default function CartItem({cart, onQuantityChange, onDeleteItem}) {
             {
                 cart.length > 0  ? (
                     cart.map((item) => (
-                        <div className="cartProduct" key={item.id}>
+                        <div data-testid='cartProduct' className="cartProduct" key={item.id}>
                             <div className="imagePrice">
                                 <img className="itemImage" src={item.image} alt={item.description}></img>
                                 <div className="each">${item.price} each</div>
